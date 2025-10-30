@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    scroll-behavior: smooth;
+}
+
+* a{
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+}
+
+.mainNetflixcontainer{
+    position: relative;
+}
+
+.backgroundContainer{
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/50fcc930-ba3f-4cae-9257-9f920e30a998/web/IN-en-20250310-TRIFECTA-perspective_739387a0-ff14-44ed-a5af-36e5aa4d236e_small.jpg);
+    filter: blur(16px);
+    height: 100vh;
+    position: relative;
+}
+
+.pinkOverlay{
+    background-color: rgba(114, 4, 22, 0.459);
+    height: 100%;
+    width: 100%;
+}
+
+.contentContainer{
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5 );
+    padding: 0rem 2rem;
+}
+
+nav{
+    height: 20vh;
+    position: fixed;
+    z-index: 10000;
+}
+
+.upperNavbarSection{
+    display: flex;
+    height: 50%;
+}
+
+.upperNavbarLeftSection{
+    width: 50%;
+}
+
+.netflixlogo{
+    width: 27%;
+}
+
+.upperNavbarRightSection{
+    width: 50%;
+}
+
+.navBarButtonContainerd{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.languageButton{
+    display: flex;
+    align-items: center;
+    padding: .4rem .5rem;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1rem;
+}
+
+.signinButton{
+    background-color: #fff;
+    padding: .4rem .5rem;
+    border-radius: 50px;
+    margin-left: 5px;
+    font-size: 1rem;
+}
+
+.languageButton p{
+    margin-left: 5px;
+}
+
+.lowerNavbarSection{
+    height: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.menuList{
+    width: 40%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    background: rgba(0,0,0,.8);
+    box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.329);
+    backdrop-filter: blur(7px);
+    height: 7vh;
+}
+
+.menuList li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sectionsContainer{
+    margin-top: 20vh;
+}
+
+.bannerSection{
+    border: transparent;
+    height: 90vh;
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/50fcc930-ba3f-4cae-9257-9f920e30a998/web/IN-en-20250310-TRIFECTA-perspective_739387a0-ff14-44ed-a5af-36e5aa4d236e_small.jpg);
+    background-size: 100% 100%;
+    border-radius: 20px;
+    position: relative;
+
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.7),black);
+    border-radius: 20px;
+}
+
+.bannerContainer{
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerContainer h2{
+    font-size: 4rem;
+    width: 50%;
+    text-align: center;
+}
+
+.bannerContainer h4{
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.bannerContainer p{
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.inputContainer{
+    width: 50%;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+
+.emailInputBox{
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid white;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1rem;
+}
+
+.emailInputBox::placeholder{
+    color: white;
+}
+
+.getStartedButton{
+    width: 30%;
+    background-color: red;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.carouselSection,
+.planSection,
+.reasontojoin,
+.faqSection,
+.getstartedSection{
+    color: white;
+}
+
+.carouselSection h2,
+.planSection h2,
+.reasontojoin h2,
+.faqSection h2{
+    margin-left: 5rem;
+    font-size: 2rem;
+}
+
+.carouselCardContainer,
+.plansContainer,
+.reasonContainer,
+.faqCardsContainer{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+
+.carouselNumberContainer{
+    position: absolute;
+    left: -20px;
+    top: -5%;
+}
+
+.carouselNumberContainer span{
+    color: rgb(0, 0, 0,0.8);
+    -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+}
+
+.carouselCard{
+    width: 13%;
+    height: 38vh;
+    border-radius: 20px;
+    position: relative;
+}
+
+.carouselImageContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselImageContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.planCard{
+    height: 30vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.334);
+}
+
+.planCard1{
+    background: linear-gradient(149deg, #1D529D 6.96%, #233371 40.17%, #120c1f 73.39%);
+}
+
+.planCard2{
+    background: linear-gradient(149deg, #1D529D 6.96%, #233371 40.17%, #120c1f 73.39%);
+}
+
+.planCard3{
+    background: linear-gradient(149deg, #792A95 6.96%, #38216C 40.17%, #120c1f 73.39%);
+}
+
+.planCard4{
+    background: linear-gradient(149deg, #922556 6.96%, #391945 40.17%, #120c1f 73.39%);
+}
+
+.planCard h2{
+    margin-left: 0;
+    font-size: 1.5rem;
+}
+
+.planCard h4{
+    font-size: 1.3rem;
+}
+
+.planCard p,
+.reasonCard p{
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.reasonCard{
+    border: 2px solid rgba(255, 255, 255, 0.062);
+    height: 30vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 1rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.reasonCard h2{
+    margin-left: 0;
+    font-size: 1.5rem;
+    padding-bottom: 5%;
+}
+
+.reasonCardLowerContent{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.faqCard{
+    width: 100%;
+}
+
+.faqQuestion,
+.faqAnswer{
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.062);
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.faqQuestion{
+    height: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqQuestion span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+
+.faqAnswer {
+    display: none;
+}
+
+.faqCard{
+    cursor: pointer;
+}
+
+.faqQuestion:hover + .faqAnswer {
+    display: block;
+    cursor: pointer;
+}
+
+.faqCardsContainer{
+    flex-direction: column;
+}
+
+.getstartedSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.getstartedSection p{
+    margin-bottom: 1rem;
+}
